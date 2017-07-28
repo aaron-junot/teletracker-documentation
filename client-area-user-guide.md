@@ -37,7 +37,7 @@ The account switcher is a drop down menu of all the accounts associated with the
 
 ![alt text](images/profile-menu.png "Profile Menu")
 
-The profile menu is a dropdown that allows the user to logout. More options for personal settings coming soon!
+The profile menu is a dropdown. The user's name is displayed, and if they have a TeleTracker number associated with their profile, that will be displayed as well. Currently, the only option in the dropdown is to log out. More options for personal settings coming soon!
 
 
 ## Account Module
@@ -71,7 +71,59 @@ The account settings page allows users to change account wide settings.
 | Recording Warning Tone     | This plays an automatic warning tone for outgoing calls. This complies with 47 CFR § 64.501(c) which states an automatic tone warning can be played at regular intervals for the purpose of informing the callers that the call is being recorded. Required if the agent or a recording does not explicitly inform the receiver of the call that the call is being recorded.  |
 | Update Button              | The update button updates the server with the new values from the form. Changes are not saved unless this button is clicked. |
 
+### Billing Info
 
+The billing info page allows users to change their billing info. There are two tabs at the top: Billing info and Payment Details.
+
+#### Billing Info Tab
+
+![alt text](images/billing-info.png "Billing Info")
+
+The billing info tab allows users to update their information such as account name, address, etc.
+
+| Name                       | Description                                                     |
+| -------------------------- | :-------------------------------------------------------------: |
+| Account Name               | Name of the account as showed in the account switcher dropdown. |
+| First Name                 | First name of the account holder.                               |
+| Last Name                  | Last name of the account holder.                                |
+| E-mail Address             | E-mail address of the account holder.                           |
+| Telephone                  | Contact phone number for account holder.                        |
+| Address (Line 1)           | Street address of the account holder. Should be the billing address of credit card used for payment |
+| Address (Line 2)           | Optional apartment/suite number                                 |
+| City                       | City of account holder                                          |
+| State                      | State of account holder. Currently only U.S. states and Canadian Provinces available |
+| Postal Code                | Zip code of the account holder                                  |
+
+There is also an additional contact form for another person to recieve billing related emails/phone calls.
+
+#### Payment Details Tab
+
+![alt text](images/payment-details.png "Payment Details")
+
+The payment details tab allows users to choose their payment method. If "Mail in Payment" is selected, the address to mail a check to is displayed. If "Credit Card" is chosen and the user has a card on file, the last four digits of the card are displayed. If there is no credit card on file, a form to submit credit card information is displayed.
+
+| Name                       | Description                                                              |
+| -------------------------- | :----------------------------------------------------------------------: |
+| Card Number                | The credit card number to be charged.                                    |
+| CVV Number                 | The cvv of the credit card to be charged.                                |
+| Expiration Date            | The expiration date of the credit card to be charged.                    |
+| Name on Card               | First and Last name of the credit card holder as it appears on the card. |
+| Last Name                  | Last name of the account holder.                                         |
+| E-mail Address             | E-mail address of the account holder.                                    |
+| Telephone                  | Contact phone number for account holder.                                 |
+| Street Address             | Street address of the credit card billing address.                       |
+| City                       | City of credit card billing address.                                     |
+| State                      | State of credit card billing address. U.S. state or Canadian province.   |
+| Postal Code                | Zip code of credit card billing address.                                 |
+
+
+
+### Manage Users
+
+![alt text](images/manage-users-table.png "Manage Users - List of Users")
+
+
+![alt text](images/manage-users-form.png "Manage Users - Edit Form")
 
 
 ## Cloud Phone System Module
