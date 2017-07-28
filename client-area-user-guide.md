@@ -13,7 +13,7 @@ This document provides instructions on how to use the TeleTracker Client Area, i
 
 ## Home Screen
 
-![alt text](images/homescreen.png "Home Screen")
+![Home Screen](images/homescreen.png "Home Screen")
 
 The Home Screen is composed of three main components:
 
@@ -23,19 +23,19 @@ The Home Screen is composed of three main components:
 
 ### Navigation Menu
 
-![alt text](images/navigation-menu.png "Navigation Menu")
+![Navigation Menu](images/navigation-menu.png "Navigation Menu")
 
 The navigation menu on the left is composed of the toggle button (for showing and hiding the menu) and a list of modules. Each module is discussed in detail below. The modules that are displayed depend on the access level of the user as well as how the account is set up. For example, Yard Signs are not relevant for all accounts, and therefore the Yard Sign Module is not displayed for those accounts.
 
 ### Account Switcher
 
-![alt text](images/account-switcher.png "Account Switcher")
+![Account Switcher](images/account-switcher.png "Account Switcher")
 
 The account switcher is a drop down menu of all the accounts associated with the currently logged in user. If the user only has one account (as in the image above), only the one account is displayed. The refresh button to the right of the dropdown refreshes the available accounts.
 
 ### Profile Menu
 
-![alt text](images/profile-menu.png "Profile Menu")
+![Profile Menu](images/profile-menu.png "Profile Menu")
 
 The profile menu is a dropdown. The user's name is displayed, and if they have a TeleTracker number associated with their profile, that will be displayed as well. Currently, the only option in the dropdown is to log out. More options for personal settings coming soon!
 
@@ -50,7 +50,7 @@ The account module is only visible to users with access level "Manager" or "Admi
 
 ### Account Settings
 
-![alt text](images/account-settings.png "Account Settings")
+![Account Settings](images/account-settings.png "Account Settings")
 
 The account settings page allows users to change account wide settings. 
 
@@ -77,7 +77,7 @@ The billing info page allows users to change their billing info. There are two t
 
 #### Billing Info Tab
 
-![alt text](images/billing-info.png "Billing Info")
+![Billing Info](images/billing-info.png "Billing Info")
 
 The billing info tab allows users to update their information such as account name, address, etc.
 
@@ -98,7 +98,7 @@ There is also an additional contact form for another person to recieve billing r
 
 #### Payment Details Tab
 
-![alt text](images/payment-details.png "Payment Details")
+![Billing Info](images/payment-details.png "c")
 
 The payment details tab allows users to choose their payment method. If "Mail in Payment" is selected, the address to mail a check to is displayed. If "Credit Card" is chosen and the user has a card on file, the last four digits of the card are displayed. If there is no credit card on file, a form to submit credit card information is displayed.
 
@@ -120,10 +120,10 @@ The payment details tab allows users to choose their payment method. If "Mail in
 
 ### Manage Users
 
-![alt text](images/manage-users-table.png "Manage Users - List of Users")
+![Manage Users - List of Users](images/manage-users-table.png "Manage Users - List of Users")
 
 
-![alt text](images/manage-users-form.png "Manage Users - Edit Form")
+![Manage Users - Edit Form](images/manage-users-form.png "Manage Users - Edit Form")
 
 
 ## Cloud Phone System Module
