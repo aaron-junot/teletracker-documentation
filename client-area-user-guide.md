@@ -88,17 +88,17 @@ The billing info tab allows users to update their information such as account na
 | Last Name                  | Last name of the account holder.                                |
 | E-mail Address             | E-mail address of the account holder.                           |
 | Telephone                  | Contact phone number for account holder.                        |
-| Address (Line 1)           | Street address of the account holder. Should be the billing address of credit card used for payment |
-| Address (Line 2)           | Optional apartment/suite number                                 |
-| City                       | City of account holder                                          |
-| State                      | State of account holder. Currently only U.S. states and Canadian Provinces available |
-| Postal Code                | Zip code of the account holder                                  |
+| Address (Line 1)           | Street address of the account holder. Should be the billing address of credit card used for payment. |
+| Address (Line 2)           | Optional apartment/suite number.                                |
+| City                       | City of account holder.                                         |
+| State                      | State of account holder. Currently only U.S. states and Canadian Provinces available. |
+| Postal Code                | Zip code of the account holder.                                 |
 
 There is also an additional contact form for another person to recieve billing related emails/phone calls.
 
 #### Payment Details Tab
 
-![Billing Info](images/payment-details.png "c")
+![Payment Details](images/payment-details.png "Payment Details")
 
 The payment details tab allows users to choose their payment method. If "Mail in Payment" is selected, the address to mail a check to is displayed. If "Credit Card" is chosen and the user has a card on file, the last four digits of the card are displayed. If there is no credit card on file, a form to submit credit card information is displayed.
 
