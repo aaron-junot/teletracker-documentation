@@ -165,11 +165,199 @@ The create user form is accessed by clicking the "Create New User" button at the
 
 ## Cloud Phone System Module
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit facilisis dolor, sed convallis massa tincidunt nec. Praesent aliquam tortor in ipsum mattis, a iaculis metus blandit. Vestibulum et feugiat leo, at aliquet orci. Nullam consequat ante nulla, vel blandit orci dignissim ut. In quis dignissim ante, nec efficitur quam. Aenean neque lacus, efficitur ultricies nulla in, fermentum mollis enim. Mauris sed eros vel felis volutpat tempor. Aenean ornare urna quis massa mattis, eu porttitor neque feugiat. Aenean a risus a risus fringilla eleifend id ac urna. Duis non ante sit amet sem iaculis vulputate hendrerit a purus. Mauris ut quam a orci gravida feugiat. Donec sed malesuada leo. Curabitur tempus auctor lectus at finibus. Aenean ultrices suscipit sapien, in placerat arcu vestibulum vulputate.
+The Cloud Phone System Module consists of the following parts:
 
-Morbi ut imperdiet dolor. Cras convallis sapien augue, at facilisis tellus dictum eget. Pellentesque ut quam sollicitudin, bibendum leo ac, finibus est. Cras maximus neque arcu, nec efficitur ipsum luctus ac. Pellentesque auctor luctus risus, ut condimentum sem semper et. Aenean pulvinar urna dolor, commodo dignissim sem egestas id. Nulla facilisi. Nam facilisis et nunc a luctus. Cras et placerat diam.
+* [General Lines](#general-lines)
+* [Yard Sign Lines](#yard-sign-lines)
+* [Auto Attendant](#auto-attendant)
+* [Business Hours](#business-hours)
+* [Manage Audio](#manage-audio)
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque dolor odio, pretium id ligula in, porta dictum mauris. Vivamus pretium mollis mauris eleifend consequat. Aenean justo urna, consectetur id elementum vel, laoreet tempor lectus. Vestibulum sed augue eget odio congue tincidunt. Sed auctor metus eget laoreet aliquet. Donec luctus scelerisque urna, vel lobortis nulla lobortis tincidunt. Fusce cursus ut magna non tincidunt.
+### General Lines
+
+The General Lines sub-module consists of a list of general lines, a form to create a new line, and a form to edit an existing line. The edit view is accessed via the edit button in the options column of the list, and the create view is accessed by the "Create New General Line" button at the bottom.
+
+#### General Lines List
+
+![General Lines - List](images/general-lines-list.png "General Lines - List")
+
+The list has four columns: Name, Description, Advertised Number, and Options. The advertised number is the number that callers will actually dial to reach that line. The options column contains an edit button and a delete button.
+
+
+#### General Lines Edit View
+
+![General Lines - Edit View](images/general-lines-edit.png "General Lines - Edit View")
+
+The edit view consists of several tabs. All accounts have "General Settings" and "Advanced Settings" tabs, and accounts with InfusionSoft integration also have a tab for "InfusionSoft Settings".
+
+General Settings
+
+| Name                       | Description                                                              |
+| -------------------------- | :----------------------------------------------------------------------: |
+| General Line Name          | The name of the line to be displayed throughout the app.                 |
+| Description                | A description of this line.                                              |
+| Number                     | This is the number users call to reach this line. In the edit view, the number is just displayed as it cannot be edited. In the create view, users can choose a number from the list of available numbers. |
+| Ring Strategy *            | Sets the ring strategy and default endpoint or an Auto Attendant (IVR)   |
+| Enable Voicemail           | Checking this box enables voicemail. If "Straight to Voicemail" is selected, this box cannot be unchecked. |
+| Voicemail Box              | By default, voicemail is only accessible through reports. If a SIP phone has a voicemail box configured, the voicemail for this line can show up in that voicemail box as well. |
+| Open Hours                 | Number of rings before voicemail picks up during open hours.             |
+| Closed Hours               | Number of rings before voicemail picks up during closed hours.           |
+| Voicemail Outgoing         | This is the message the caller hears when voicemail picks up. Typically, it would instruct them to leave a message after the beep. |
+| Email VM Recordings To     | Up to 10 email addresses can be selected to be notified of voicemails left on the line. The email includes a link to the recording. |
+
+*Note - In a typical configuration, there are several numbers (up to 10) that will ring when a caller calls this line. These numbers must be non TeleTracker numbers. These numbers can ring all at the same time, or they ring one at a time in a "Round Robin" fashion. Callers can also be sent straight to voicemail, negating the need for forwarding numbers. Alternatively, if an Auto Attendants are set up for the account, callers can be sent to the selected Auto Attendant, which will determine where the call gets forwarded to.
+
+![General Lines - Advanced Settings](images/general-lines-advanced.png "General Lines - Advanced Settings")
+
+Advanced Settings
+
+| Name                       | Description                                                                                 |
+| -------------------------- | :-----------------------------------------------------------------------------------------: |
+| Confirm Calls              | Agents answering a call will be prompted for call confirmation.                             |
+| Caller ID Mode             | The phone that receives the calls placed to this line will show the specified number on the caller id. It can be passed through from the original caller, it can show up as the line's number, or it can be a custom phone number. |
+| Specified Caller ID        | If Specify Caller ID value is selected for the Caller ID Mode, this is where to input the specified number. |
+| Agent PIN Entry            | If set, allows calls to be associated with users when they enter their PIN.                 |
+| Notifcations On Calls      | The line can send out e-mail or text message notifications on calls. This checkbox sends out on all calls, regardless of whether it was answered or missed. |
+| Notifications On Missed    | Notifications are sent out for missed calls only.                                           |
+| Email Call Notifications To| Specified email addresses will receive the notifications specified by the above checkboxes. |
+| Numbers To Receive Texts   | Text message notifications will be sent to the specified numbers for the notifications checked in the above checkboxes. |
+| Record Incoming Calls      | If checked, call recordings will show up in Call Tracker Reports.                           |
+| Outgoing Message           | This is the first message callers hear. Typically, it informs the caller that the call will be recorded. |
+| Whisper Message            | This message is played for the agent when they answer the phone.                            |
+
+![General Lines - InfusionSoft Settings](images/general-lines-infusionsoft.png "General Lines - InfusionSoft Settings")
+
+InfusionSoft Settings
+
+| Name                             | Description                                              |
+| --------------------------       | :------------------------------------------------------: |
+| Disable InfusionSoft             | Turns off InfusionSoft integration for this line.        |
+| Apply tags for new contacts      | This will apply the specified tags for new contacts.     |
+| Apply tags for existing contacts | Will apply specified tags for existing contacts.         |
+| Default Tags                     | Selected tags will be applied to the calls to this line. |
+| New Contact Action Code          | Action code for new contacts.                            |
+| New Call Action Code             | Action code for new calls.                               |
+| New Text Action Code             | Action code for new texts.                               |
+
+#### General Lines Create View
+
+The create view for general lines is the same as the edit view described above.
+
+### Yard Sign Lines
+
+Yard Sign Lines consist of the same components as the General Lines. The difference between General Lines and Yard Sign Lines is that when a user calls a yard sign line, a few specific things happen:
+
+1. The caller hears an outgoing message (which tells them to input the number for the yard sign they'd like to hear about)
+2. The caller enters the yard sign number
+3. The caller hears a second message (describing the property they are inquiring about)
+4. The caller can press 1 to be connected to the number(s) in the Ring Strategy portion of the yard sign line
+5. The caller can press 2 to receive a text message about the property (the specifics of the text they receive are defined by the [Yard Signs Module](#yard-signs-module))
+
+Some parts of the above process are determined by the Yard Sign Line settings, and some are determined by the Yard Sign Module settings. The following are the main notable differences between the Yard Sign Line settings and the General Line settings:
+
+* The outgoing message for yard signs **must** prompt the user to enter a yard sign number (the system will just wait for them to enter a number)
+* There is no whisper message option for a yard sign line because the whisper message is determined by the yard sign the user selected (set up in the [Yard Sign Module](#yard-signs-module)).
+
+*Note - There is no way to convert a yard sign line into a general line (or vice versa). If this needs to happen, the line must be deleted, which will free up the number on the account. Then a new general or yard sign line can be created using that number. The settings must be reconfigured after the new line is created.
+
+### Auto Attendant
+
+An Auto Attendant can be set up to answer calls and direct callers to the end point of their choice. One common use case for this is to direct users to various departments within the organization. For example, the auto attendant can be configured to send callers to the Sales department if they press 1, and send them to the Support department if they press 2. It is also common to set 0 to direct to an operator. 
+
+Auto Attendants can be nested. For example, a user presses 1 for Sales, then is presented with the "Sales" auto attendant, which prompts them to press 1 for "Sally", 2 for "Jim", or 3 for "Bob".
+
+The Auto Attendant Module consists of a create view with a guided set up, an edit view, and a list of auto attendants. If there are no Auto Attendants set on the account, the auto attendant module will simply display the guided setup, allowing a user to create an auto attendant step-by-step. 
+
+#### Auto Attendant Guided Set Up
+
+![Auto Attendant - Guided Set Up](images/auto-attendant-guide.png "Auto Attendant - Guided Set Up")
+
+The Auto Attendant guided set up is designed to be self explanatory as a user clicks through the steps. The options available are the same options described in the [Auto Attendant Edit Form](#auto-attendant-edit-form) section.
+
+#### Auto Attendant Edit Form
+
+![Auto Attendant - Edit Form](images/auto-attendant-edit.png "Auto Attendant - Edit Form")
+
+If the "Skip Guided Set Up" is clicked, the user will see the Auto Attendant edit form. This edit form is the same for creating a new auto attendant, or editing an existing auto attendant.
+
+| Name                 | Description                                                                           |
+| -------------------- | :-----------------------------------------------------------------------------------: |
+| Name                 | The name of this auto attendant.                                                      |
+| Description          | Description of the auto attendant.                                                    |
+| Repeat Message       | Number of times to repeat the message before sending callers to the default location. |
+| Default Location     | Phone to ring if the user does not enter a valid menu option.                         |
+| Message Prompt       | The audio message a caller will hear when they call.                                  |
+
+![Auto Attendant - Options](images/auto-attendant-options.png "Auto Attendant - Options")
+
+Each menu option has its own configuration which can be seen by clicking on the option from the list in the form. This will expand a sub-form that contains the fields for the menu option. 
+
+| Name                   | Description                                                                 |
+| ---------------------- | :-------------------------------------------------------------------------: |
+| Menu Option #          | The number the caller presses to get to this option.                        |
+| Option Description     | Short description of the option for display in reports.                     |
+| Numbers to Call        | The number to ring or auto attendant to forward callers to.                 |
+| Ring Strategy          | Ring All, Round Robin, or Straight to Voicemail. Round Robin requires a ring delay to be selected as well. |
+| Voicemail              | Use the line settings or override those by enabling/disabling voicemail.    |
+| Voicemail Box          | By default, voicemail is only accessible through reports. If a SIP phone has a voicemail box configured, the voicemail for this line can show up in that voicemail box as well.                     |
+| Ring Delay             | Number of rings before voicemail picks up.                                  |
+| Voicemail Outgoing     | This is the message the caller hears when voicemail picks up. Typically, it would instruct them to leave a message after the beep. |
+| Email VM Recordings To | Up to 10 email addresses can be selected to be notified of voicemails left on the line. The email includes a link to the recording. |
+| Confirm Calls          | Agents answering a call will be prompted for call confirmation.             |
+| Agent PIN Entry        | If set, allows calls to be associated with users when they enter their PIN. |
+| Whisper Message        | This message is played for the agent when they answer the phone.            |
+
+#### Auto Attendant List
+
+![Auto Attendant - List](images/auto-attendant-list.png "Auto Attendant - List")
+
+The Auto Attendant list has four columns: Name, Description, Default Number, and Options. The default number is the number the auto attendant will send the caller to in the event they do not enter a valid menu option. The options column contains an edit button and a delete button. Clicking the edit button brings users to the [Auto Attendant Edit Form](#auto-attendant-edit-form). 
+
+The "Create New Auto Attendant" button at the bottom of the list allows a user to create a new auto attendant. This button brings up the [guided set up](#auto-attendant-guided-set-up).
+
+### Business Hours
+
+![Business Hours - List](images/business-hours-list.png "Business Hours - List")
+
+The business hours list has two columns. The first column is the name of the Open Hours Schedule, and the second column is Options. The options column allows you to edit or delete a schedule. The default schedule for the account cannot be deleted, but the name can be changed in the edit view.
+
+#### Business Hours Edit View
+
+![Business Hours - Edit View](images/business-hours-edit.png "Business Hours - Edit View")
+
+The business hours edit view allows you to choose the name of the Schedule, and set the open hours for each day of the week. Any day of the week that has no open hours is considered closed all day, and is indicated by a grey color. Days that have open hours are indicated by blue.
+
+Clicking on the day of the week opens up a sub-form that allows you add open hours to the day. 
+
+![Business Hours - Open Hours](images/business-hours-edit-open-days.png "Business Hours - Open Hours")
+
+Monday has an extra button to copy the schedule for this day to all other days. Other than that, all days are the same. They feature a link to Add Open Hours, which gives an open and closing time to fill out. This allows for a schedule such as Open in the morning, closed for lunch, then open again in the afternoon. 
+
+When the hours for the schedule have all been chosen, the user must click the "Update" button at the bottom of the form.
+
+#### Business Hours Create View
+
+The create view functions in exactly the same manner as the [Business Hours Edit View](#business-hours-edit-view).
+
+### Manage Audio
+
+![Manage Audio - List](images/manage-audio-list.png "Manage Audio - List")
+
+The Manage Audio list has four columns: Name, Description, Last Updated, and Options. The Name for the audio is referenced throughout the app. The last updated date is the day the name, description, or audio file changed.
+
+The options column includes a play button to listen to the audio, an edit button to update the audio, and a delete button. On every account, there are two audio files that cannot be edited or deleted: "May Be Recorded" and "Standard VM Prompt". These standard messages are used as defaults for outgoing message and the voicemail prompt on a line. All other audio files can be updated and deleted.
+
+At the bottom of a list is a button to upload a new audio file.
+
+#### Manage Audio Edit View
+
+![Manage Audio - Edit View](images/manage-audio-edit.png "Manage Audio - Edit View")
+
+The edit view allows you to change the name and/or description of the audio. If necessary, a new file can be uploaded. To upload an audio file, the user can drag and drop the audio file from their computer. Alternatively, clicking the "Upload" button will open a file picker to let the user select the file from their file system. The "Last Updated" field will be automatically updated every time this form is submitted.
+
+#### Manage Audio Create View
+
+The create view functions in exactly the same manner as the [Manage Audio Edit View](#manage-audio-edit-view). The differences are that an audio file **must** be uploaded when creating a new audio record, and there is no "Last Updated" label.
 
 ## Call Tracker Module
 
