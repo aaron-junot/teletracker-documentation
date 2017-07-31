@@ -196,7 +196,7 @@ General Settings
 | -------------------------- | :----------------------------------------------------------------------: |
 | General Line Name          | The name of the line to be displayed throughout the app.                 |
 | Description                | A description of this line.                                              |
-| Number                     | This is the number users call to reach this line. In the edit view, the number is just displayed as it cannot be edited. In the create view, users can choose a number from the list of available numbers. |
+| Number                     | This is the number users call to reach this line. In the edit view, the number cannot be changed. In the create view, users can choose a number from the list of available numbers. |
 | Ring Strategy *            | Sets the ring strategy and default endpoint or an Auto Attendant (IVR)   |
 | Enable Voicemail           | Checking this box enables voicemail. If "Straight to Voicemail" is selected, this box cannot be unchecked. |
 | Voicemail Box              | By default, voicemail is only accessible through reports. If a SIP phone has a voicemail box configured, the voicemail for this line can show up in that voicemail box as well. |
@@ -205,7 +205,7 @@ General Settings
 | Voicemail Outgoing         | This is the message the caller hears when voicemail picks up. Typically, it would instruct them to leave a message after the beep. |
 | Email VM Recordings To     | Up to 10 email addresses can be selected to be notified of voicemails left on the line. The email includes a link to the recording. |
 
-*Note - In a typical configuration, there are several numbers (up to 10) that will ring when a caller calls this line. These numbers must be non TeleTracker numbers. These numbers can ring all at the same time, or they ring one at a time in a "Round Robin" fashion. Callers can also be sent straight to voicemail, negating the need for forwarding numbers. Alternatively, if an Auto Attendants are set up for the account, callers can be sent to the selected Auto Attendant, which will determine where the call gets forwarded to.
+***Note** - In a typical configuration, there are several numbers (up to 10) that will ring when a caller calls this line. These numbers must be non TeleTracker numbers. These numbers can ring all at the same time, or they ring one at a time in a "Round Robin" fashion. Callers can also be sent straight to voicemail, negating the need for forwarding numbers. Alternatively, if an Auto Attendants are set up for the account, callers can be sent to the selected Auto Attendant, which will determine where the call gets forwarded to.
 
 ![General Lines - Advanced Settings](images/general-lines-advanced.png "General Lines - Advanced Settings")
 
@@ -258,7 +258,7 @@ Some parts of the above process are determined by the Yard Sign Line settings, a
 * The outgoing message for yard signs **must** prompt the user to enter a yard sign number (the system will just wait for them to enter a number)
 * There is no whisper message option for a yard sign line because the whisper message is determined by the yard sign the user selected (set up in the [Yard Sign Module](#yard-signs-module)).
 
-*Note - There is no way to convert a yard sign line into a general line (or vice versa). If this needs to happen, the line must be deleted, which will free up the number on the account. Then a new general or yard sign line can be created using that number. The settings must be reconfigured after the new line is created.
+**Note** - There is no way to convert a yard sign line into a general line (or vice versa). If this needs to happen, the line must be deleted, which will free up the number on the account. Then a new general or yard sign line can be created using that number. The settings must be reconfigured after the new line is created.
 
 ### Auto Attendant
 
@@ -325,9 +325,9 @@ The business hours list has two columns. The first column is the name of the Ope
 
 ![Business Hours - Edit View](images/business-hours-edit.png "Business Hours - Edit View")
 
-The business hours edit view allows you to choose the name of the Schedule, and set the open hours for each day of the week. Any day of the week that has no open hours is considered closed all day, and is indicated by a grey color. Days that have open hours are indicated by blue.
+The business hours edit view allows you to choose the name of the Schedule, and set the open hours for each day of the week. Any day of the week that has no open hours is considered closed all day, and is indicated by a grey color (Pro tip: delete all open hours for a given day to set that day to "closed all day"). Days that have open hours are indicated by blue.
 
-Clicking on the day of the week opens up a sub-form that allows you add open hours to the day. 
+Clicking on the day of the week opens up a sub-form that allows you add open hours to that day.
 
 ![Business Hours - Open Hours](images/business-hours-edit-open-days.png "Business Hours - Open Hours")
 
@@ -343,7 +343,7 @@ The create view functions in exactly the same manner as the [Business Hours Edit
 
 ![Manage Audio - List](images/manage-audio-list.png "Manage Audio - List")
 
-The Manage Audio list has four columns: Name, Description, Last Updated, and Options. The Name for the audio is referenced throughout the app. The last updated date is the day the name, description, or audio file changed.
+The Manage Audio list has four columns: Name, Description, Last Updated, and Options. The Name for the audio is referenced throughout the app. The last updated date shows when the name, description, or audio file last changed.
 
 The options column includes a play button to listen to the audio, an edit button to update the audio, and a delete button. On every account, there are two audio files that cannot be edited or deleted: "May Be Recorded" and "Standard VM Prompt". These standard messages are used as defaults for outgoing message and the voicemail prompt on a line. All other audio files can be updated and deleted.
 
