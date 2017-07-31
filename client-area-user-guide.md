@@ -161,7 +161,7 @@ The edit view of the Users module is accessed by clicking the edit button in the
 
 ![Manage Users - Create Form](images/manage-users-form2.png "Manage Users - Create Form")
 
-The create user form is accessed by clicking the "Create New User" button at the bottom of the list. It is identical to the Edit form [described above](#manage-users-edit-view). The PIN is automatically generated if the account is configured to auto increment PINs in [Account Settings](#account-settings).  
+The create user form is accessed by clicking the "Create New User" button at the bottom of the list. It is identical to the Edit form [described above](#manage-users---edit-view). The PIN is automatically generated if the account is configured to auto increment PINs in [Account Settings](#account-settings).  
 
 ## Cloud Phone System Module
 
