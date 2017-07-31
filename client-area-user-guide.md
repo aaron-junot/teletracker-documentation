@@ -120,11 +120,48 @@ The payment details tab allows users to choose their payment method. If "Mail in
 
 ### Manage Users
 
+The Users module consists of a list of users on the account and the ability to create, edit and delete users.
+
+#### Manage Users List
+
 ![Manage Users - List of Users](images/manage-users-table.png "Manage Users - List of Users")
 
+The manage users list is the first page a user sees upon clicking the "Manage Users" menu option. It has all current users set up on the account, and displays name, username (email address), access level, PIN, last access date and options. The options column includes an edit button and a delete button. 
+
+#### Manage Users - Edit view
 
 ![Manage Users - Edit Form](images/manage-users-form.png "Manage Users - Edit Form")
 
+The edit view of the Users module is accessed by clicking the edit button in the options column for that user. It allows Admins and Managers to update the information for users on the account. 
+
+| Name                       | Description                                                              |
+| -------------------------- | :----------------------------------------------------------------------: |
+| Available to Recieve Calls | Checked if the user is available to take calls.                          |
+| Username                   | The email address this user will use for login.                          |
+| Change Password            | If a new password is needed, it can be changed here.                     |
+| Confirm New Password       | Must match the new password in the "Change Password" field.              |
+| Change Pass on Next Login  | Requires the user to change their password next time they log in.        |
+| PIN                        | This four digit number is used for call confirmation.                    |
+| Full Name                  | First and last name of the user.                                         |
+| Access Level *             | The access level of the user.                                            |
+| Show Only User Record      | If checked, users can only see their calls in reports.                   |
+| Primary Number             | The primary personal phone number of the user.                           |
+| Secondary Number           | A secondary number for the user. This is typically their cell phone.     |
+| Display User's Caller ID   | Option to display a particular number as the user's caller id.           |
+| Outgoing Caller ID         | The number to display as the outgoing caller id.                         |
+| Extension                  | If VoIP phones are configured for the account, this will associate calls to that phone with this user. |
+| InfusionSoft ID Number     | If the account has InfusionSoft integration enabled, this is their ID number. |
+| Department                 | The specific department the user belongs to.                             |
+| Supervisor                 | The user's supervisor. Any user on the account can be set as another user's supervisor. |
+| New Calls                  | Email notifications will be sent to this user for answered calls and/or missed calls. |
+
+*Note - There are three access levels: View Only, Manager, and Admin. View Only has limited access, and cannot create, modify or delete any information. Managers have access to all parts of the application except for billing functions. Admins have full access to create, modify, or delete any information (including billing info). 
+
+#### Manage Users - Create View
+
+![Manage Users - Create Form](images/manage-users-form2.png "Manage Users - Create Form")
+
+The create user form is accessed by clicking the "Create New User" button at the bottom of the list. It is identical to the Edit form [described above](#manage-users-edit-view). The PIN is automatically generated if the account is configured to auto increment PINs in [Account Settings](#account-settings).  
 
 ## Cloud Phone System Module
 
