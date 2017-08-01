@@ -433,6 +433,10 @@ The user is then directed to the reports view. The back button at the top allows
 
 ![Call Tracker Reports Completed](images/reports-completed.png "Call Tracker Reports Completed")
 
+By default, the reports are sorted by date, with the most recent on top. Clicking the header for "Timestamp" allows users to reverse the order and sort by oldest on top.
+
+Reports can also be sorted by campaign by clicking the Campaign Name header.
+
 There are six columns in the reports:
 
 * Timestamp
@@ -464,11 +468,37 @@ Clicking the note button will reveal a sub view in the datatable. This sub view 
 
 ## Yard Signs Module
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit facilisis dolor, sed convallis massa tincidunt nec. Praesent aliquam tortor in ipsum mattis, a iaculis metus blandit. Vestibulum et feugiat leo, at aliquet orci. Nullam consequat ante nulla, vel blandit orci dignissim ut. In quis dignissim ante, nec efficitur quam. Aenean neque lacus, efficitur ultricies nulla in, fermentum mollis enim. Mauris sed eros vel felis volutpat tempor. Aenean ornare urna quis massa mattis, eu porttitor neque feugiat. Aenean a risus a risus fringilla eleifend id ac urna. Duis non ante sit amet sem iaculis vulputate hendrerit a purus. Mauris ut quam a orci gravida feugiat. Donec sed malesuada leo. Curabitur tempus auctor lectus at finibus. Aenean ultrices suscipit sapien, in placerat arcu vestibulum vulputate.
+The Yard Signs Module is composed of a list of Yard Signs for the account, as well as a form to create or edit yard signs.
 
-Morbi ut imperdiet dolor. Cras convallis sapien augue, at facilisis tellus dictum eget. Pellentesque ut quam sollicitudin, bibendum leo ac, finibus est. Cras maximus neque arcu, nec efficitur ipsum luctus ac. Pellentesque auctor luctus risus, ut condimentum sem semper et. Aenean pulvinar urna dolor, commodo dignissim sem egestas id. Nulla facilisi. Nam facilisis et nunc a luctus. Cras et placerat diam.
+* [Yard Sign List](#yard-sign-list)
+* [Yard Sign Form](#yard-sign-form)
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque dolor odio, pretium id ligula in, porta dictum mauris. Vivamus pretium mollis mauris eleifend consequat. Aenean justo urna, consectetur id elementum vel, laoreet tempor lectus. Vestibulum sed augue eget odio congue tincidunt. Sed auctor metus eget laoreet aliquet. Donec luctus scelerisque urna, vel lobortis nulla lobortis tincidunt. Fusce cursus ut magna non tincidunt.
+### Yard Sign List
+
+![Yard Sign List](images/yard-sign-list.png "Yard Sign List")
+
+The Yard Sign List has four columns: Name, Description, Number and Options. By default, the list is sorted by name, but it can also be sorted by yard sign number by clicking the "Number" header. The options column contains edit and delete buttons. The edit button brings you to the [Yard Sign Form](#yard-sign-form). The delete button removes the yard sign. Below the list there is a button to create a new yard sign.
+
+### Yard Sign Form
+
+![Yard Sign Form](images/yard-sign-form.png "Yard Sign Form")
+ 
+The Yard Sign form allows you to create or modify a Yard Sign. When creating a new yard sign, the yard sign number is automatically incremented from the largest yard sign number used. For example, if your first yard sign number was 3000, the generated number will be 3001.
+
+**NOTE:** If the Text Message Response field is left blank, and the user elects to receive a text about the yard sign, the text will contain the Yard Sign Name and Description. Please ensure that these are accurate or that Text Message Response is filled out.
+
+| Name                   | Description                                                                           |
+| --------------------   | :-----------------------------------------------------------------------------------: |
+| Yard Sign Name         | The name of this yard sign.                                                           |
+| Description            | Description of the yard sign.                                                         |
+| Yard Sign Number       | The number the caller must enter to listen to this property message.                  |
+| Property Message       | The message that will play for callers that enter this yard sign number.              |
+| Forward To             | The numbers that will ring when users elect to be connected.                          |
+| Whisper Message        | The message the agent will hear when answering.                                       |
+| Text Message Response  | The message that will be sent to the caller if the callers elect to receive a text.   |
+| Send From Line         | The phone number that texts will appear to come from when callers receive texts.      |
+| Connect Immediately    | Connects the users to the numbers in Forward To as soon as the property message finishes playing. |
+| End Call After Message | Ends the call after the property message plays instead of sending the caller to the Forward To numbers. |
 
 ## Rapid Response Module
 
