@@ -361,6 +361,11 @@ The create view functions in exactly the same manner as the [Manage Audio Edit V
 
 ## Call Tracker Module
 
+The Call Tracker Module consists of the following:
+
+* [Dashboard](#dashboard)
+* [Reports](#reports)
+
 ### Dashboard
 
 ![Call Tracker Dashboard](images/dashboard.png "Call Tracker Dashboard")
@@ -424,7 +429,7 @@ Once all the required fields are filled out the user clicks the submit button to
 
 ![Call Tracker Reports Placeholder Message](images/reports-placeholder.png "Call Tracker Reports Placeholder Message")
 
-The user is then directed to the reports view. The back button at the top allows the user to jump back and forth between the form and the reports view. At the top right, the type of report, call types and date range is displayed to easily see which report is currently being viewed. A message is displayed as a placeholder while the report is being generated.
+The user is then directed to the reports view. The back button at the top allows the user to jump back and forth between the form and the reports views. At the top right, the type of report, call types and date range is displayed to easily see which report is currently being viewed. A message is displayed as a placeholder while the report is being generated.
 
 ![Call Tracker Reports Completed](images/reports-completed.png "Call Tracker Reports Completed")
 
@@ -456,7 +461,6 @@ The Options column contains a play button (if there is a recording available), a
 Clicking the note button will reveal a sub view in the datatable. This sub view contains any call notes for the call, as well as options for emailing the call notes and a link to the call recording (if applicable). When a call contains a note, the note button is orange instead of blue. All text messages contain a call note that says "TEXT: {$message}" where `$message` is the message that was sent. Voice calls do not contain notes by default. All notes can be edited and saved from this form. For the email portion, users can select recipients from the list of users on the account or can type in an email address. Typed emails are considered "External Recipients". 
 
 ![Call Tracker Reports Notes](images/reports-notes.png "Call Tracker Reports Notes")
- 
 
 ## Yard Signs Module
 
