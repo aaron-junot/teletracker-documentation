@@ -361,11 +361,102 @@ The create view functions in exactly the same manner as the [Manage Audio Edit V
 
 ## Call Tracker Module
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit facilisis dolor, sed convallis massa tincidunt nec. Praesent aliquam tortor in ipsum mattis, a iaculis metus blandit. Vestibulum et feugiat leo, at aliquet orci. Nullam consequat ante nulla, vel blandit orci dignissim ut. In quis dignissim ante, nec efficitur quam. Aenean neque lacus, efficitur ultricies nulla in, fermentum mollis enim. Mauris sed eros vel felis volutpat tempor. Aenean ornare urna quis massa mattis, eu porttitor neque feugiat. Aenean a risus a risus fringilla eleifend id ac urna. Duis non ante sit amet sem iaculis vulputate hendrerit a purus. Mauris ut quam a orci gravida feugiat. Donec sed malesuada leo. Curabitur tempus auctor lectus at finibus. Aenean ultrices suscipit sapien, in placerat arcu vestibulum vulputate.
+### Dashboard
 
-Morbi ut imperdiet dolor. Cras convallis sapien augue, at facilisis tellus dictum eget. Pellentesque ut quam sollicitudin, bibendum leo ac, finibus est. Cras maximus neque arcu, nec efficitur ipsum luctus ac. Pellentesque auctor luctus risus, ut condimentum sem semper et. Aenean pulvinar urna dolor, commodo dignissim sem egestas id. Nulla facilisi. Nam facilisis et nunc a luctus. Cras et placerat diam.
+![Call Tracker Dashboard](images/dashboard.png "Call Tracker Dashboard")
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque dolor odio, pretium id ligula in, porta dictum mauris. Vivamus pretium mollis mauris eleifend consequat. Aenean justo urna, consectetur id elementum vel, laoreet tempor lectus. Vestibulum sed augue eget odio congue tincidunt. Sed auctor metus eget laoreet aliquet. Donec luctus scelerisque urna, vel lobortis nulla lobortis tincidunt. Fusce cursus ut magna non tincidunt.
+The dashboard provides a high level overview of the calls on the account. When a user navigates to the dashboard, the last seven days of inbound call data is displayed. There is a toggle widget to switch between inbound and outbound data, and there is a date range picker to choose a specific date range. Once a date range is chosen, the user must click submit to see the data for that range. Switching between inbound and outbound automatically gets the data for the chosen range.
+
+The print button allows a user to print the dashboard.
+
+For inbound calling, there are six different statistics displayed: Calling Overview, Texting Overview, Calls By Agent, Calls By Campaign, Calls and Texts By Time, and a datatable of calls by campaign. 
+
+The exact numbers of the calls and texts by time can be seen by hovering your mouse over the peak on the graph, as shown below.
+
+![Calls and Texts By Time Hover](images/hover.png "Calls and Texts By Time Hover")
+
+When outbound calling is selected, the calls by campaign widget disappears and the datatable is a breakdown of calls by agent. 
+
+The datatable can be exported to [CSV](http://edoceo.com/utilitas/csv-file-format) by clicking the CSV button. 
+
+![CSV Button](images/csv-button.png "CSV Button")
+
+### Reports
+
+![Call Tracker Reports Form](images/reports-form.png "Call Tracker Reports Form")
+
+When the user navigates to Call Tracker Reports, a form is displayed to determine the type of report to pull. The "Clear Form" link resets the form back to the default state.
+
+The following report types are available:
+
+* Incoming Activity Detail Report
+* Incoming Missed Call Detail Report
+* Incoming Activity Detail Report By Campaign
+* Incoming Activity Detail Report By Salesperson/Agent
+* Incoming Activity Detail Report By Yard Sign
+* Outgoing Activity Detail Report
+* Rapid Response Activity Detail Report
+
+Users that do not have yard signs enabled on their account do not see the option for the yard sign report. Similarly, if Rapid Response is not enabled on the account, the Rapid Response report is not available.
+
+If the report type is "by Campaign", "by Salesperson/Agent", or "by Yard Sign", an additional field appears on the form. The field allows you to select whichever campaigns, agents, or yard signs to include in the report. To the right of the fields are "select all" and "deselect all" buttons.
+
+![Call Tracker Reports Context Field](images/reports-context.png "Call Tracker Reports Context Field")
+
+The available call types are:
+
+* Voice Calls
+* Text Messages
+
+
+The date range picker is similar to the one in the [dashboard](#dashboard), but features buttons for common date ranges. These options are:
+
+* Today
+* Yesterday
+* Last 7 Days
+* This Month
+* Last Month
+* Last 3 Months
+
+![Call Tracker Reports Date Range Picker](images/reports-daterange.png "Call Tracker Reports Date Range Picker")
+
+Once all the required fields are filled out the user clicks the submit button to view the report. Alternatively, the user can click the "Export CSV" link to download a CSV of the report data without viewing it in the browser.
+
+![Call Tracker Reports Placeholder Message](images/reports-placeholder.png "Call Tracker Reports Placeholder Message")
+
+The user is then directed to the reports view. The back button at the top allows the user to jump back and forth between the form and the reports view. At the top right, the type of report, call types and date range is displayed to easily see which report is currently being viewed. A message is displayed as a placeholder while the report is being generated.
+
+![Call Tracker Reports Completed](images/reports-completed.png "Call Tracker Reports Completed")
+
+There are six columns in the reports:
+
+* Timestamp
+* Status
+* Caller Info
+* Campaign Name
+* Rating
+* Options
+
+The Timestamp column displays the date and time the call began. 
+
+The Status column has the duration of the call and the disposition. There are four dispositions for voice calls: Answered, Missed, Canceled and Voicemail. Missed, Canceled, and Voicemail all show in the Incoming Missed Call Detail Report. Text messages do not have a duration nor a disposition.
+
+The Caller Info column shows all information available on the caller. Typically, it will be the phone number they called from, the person's name, and the city, state and zipcode of the phone number. If the caller called from a restricted number, "Unknown Phone Number" will be displayed as the caller info.
+
+The Campaign Name column shows the information about the campaign. For an incoming call, this will include the name and number of the line that was called. For an outgoing call, it will indicate that it was outgoing and include the number the call was initiated from. If an agent was associated with the call, it will have a user icon, followed by the name of the agent and their PIN in parentheses. If the call was associated with a yard sign, the name and number of the yard sign the user chose will be displayed.
+
+![Call Tracker Reports - Agent](images/reports-agent.png "Call Tracker Reports - Agent") ![Call Tracker Reports Yard Sign](images/reports-yard-sign.png "Call Tracker Reports Yard Sign")
+
+The Rating column allows the user to give the call a rating between 1 and 5 stars. The minus circle icon to the left of the stars clears the rating.
+
+The Options column contains a play button (if there is a recording available), a note button and a delete button. The play button will pop up an audio player that will play the recording.
+
+![Call Tracker Reports Audio Player](images/reports-play.png "Call Tracker Reports Audio Player")
+
+Clicking the note button will reveal a sub view in the datatable. This sub view contains any call notes for the call, as well as options for emailing the call notes and a link to the call recording (if applicable). When a call contains a note, the note button is orange instead of blue. All text messages contain a call note that says "TEXT: {$message}" where `$message` is the message that was sent. Voice calls do not contain notes by default. All notes can be edited and saved from this form. For the email portion, users can select recipients from the list of users on the account or can type in an email address. Typed emails are considered "External Recipients". 
+
+![Call Tracker Reports Notes](images/reports-notes.png "Call Tracker Reports Notes")
+ 
 
 ## Yard Signs Module
 
