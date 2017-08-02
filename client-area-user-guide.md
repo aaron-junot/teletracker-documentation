@@ -502,8 +502,72 @@ The Yard Sign form allows you to create or modify a Yard Sign. When creating a n
 
 ## Rapid Response Module
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit facilisis dolor, sed convallis massa tincidunt nec. Praesent aliquam tortor in ipsum mattis, a iaculis metus blandit. Vestibulum et feugiat leo, at aliquet orci. Nullam consequat ante nulla, vel blandit orci dignissim ut. In quis dignissim ante, nec efficitur quam. Aenean neque lacus, efficitur ultricies nulla in, fermentum mollis enim. Mauris sed eros vel felis volutpat tempor. Aenean ornare urna quis massa mattis, eu porttitor neque feugiat. Aenean a risus a risus fringilla eleifend id ac urna. Duis non ante sit amet sem iaculis vulputate hendrerit a purus. Mauris ut quam a orci gravida feugiat. Donec sed malesuada leo. Curabitur tempus auctor lectus at finibus. Aenean ultrices suscipit sapien, in placerat arcu vestibulum vulputate.
+Rapid Response is a system where a customer navigates to a website and submits a form indicating that they would like to be contacted. The system automatically connects the customer to the agents by calling the agents and then calling the customer. The user can define the order in which agents are called and how long to dial them for by configuring a [Call Process](#rapid-response-call-process).
 
-Morbi ut imperdiet dolor. Cras convallis sapien augue, at facilisis tellus dictum eget. Pellentesque ut quam sollicitudin, bibendum leo ac, finibus est. Cras maximus neque arcu, nec efficitur ipsum luctus ac. Pellentesque auctor luctus risus, ut condimentum sem semper et. Aenean pulvinar urna dolor, commodo dignissim sem egestas id. Nulla facilisi. Nam facilisis et nunc a luctus. Cras et placerat diam.
+The Rapid Response Module consists of the following:
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque dolor odio, pretium id ligula in, porta dictum mauris. Vivamus pretium mollis mauris eleifend consequat. Aenean justo urna, consectetur id elementum vel, laoreet tempor lectus. Vestibulum sed augue eget odio congue tincidunt. Sed auctor metus eget laoreet aliquet. Donec luctus scelerisque urna, vel lobortis nulla lobortis tincidunt. Fusce cursus ut magna non tincidunt.
+* [Dashboard](#rapid-response-dashboard)
+* [Users](#rapid-response-users)
+* [Groups](#rapid-response-groups)
+* [Call Process](#rapid-response-call-process)
+
+### Rapid Response Dashboard
+
+![Rapid Response Dashboard](images/rapid-response-dashboard.png "Rapid Response Dashboard")
+
+The Rapid Response Dashboard provides a high level overview of the Rapid Response activity for the account. At the top, the number of jobs today, number of jobs for the past 30 days, and average response time are displayed. Next is a chart of Average Jobs by Hour which shows the time of day jobs were completed over the last 30 days. At the bottom of the page, the last 5 jobs completed are displayed next to a pie chart of Success Rate for the past 30 days. 
+
+### Rapid Response Users
+
+![Rapid Response User List](images/rapid-response-user-list.png "Rapid Response User List")
+
+For Rapid Response to work, users must be set up to accept calls. The users are displayed in a list with four columns: User Name, Phone Number, Call Status, and Options. Call Status can be changed at any time for any user to enable or disable that user. The Options column provides an edit button to edit the user and a delete button to delete the user. Below the list is a button to add a new user.
+
+![Rapid Response User Form](images/rapid-response-user-edit.png "Rapid Response User Form")
+
+The Rapid Response User form allows users to add or update a Rapid Response User's name, phone number, and call status. 
+
+| Name           | Description                                              |
+| -------------- | :------------------------------------------------------: |
+| Name           | The name of the user.                                    |
+| Phone Number   | The phone number for this user.                          |
+| Call Status    | Users can be enabled or disabled through this selection. |
+
+### Rapid Response Groups
+
+![Rapid Response Group List](images/rapid-response-group-list.png "Rapid Response Group List")
+
+Rapid Response Groups are used to call a specific group of users all in one step. The users are called all at once and whichever agent accepts first gets the call. Groups can include as many users as needed. The Group list has three columns: Call Group Name, Members, and Options. The Options column contains an edit button and a delete button. Below the list is a button to add a new group.
+
+![Rapid Response Group Form](images/rapid-response-group-edit.png "Rapid Response Group Form")
+
+The Rapid Response Group Form allows a user to name the group, and check whichever members should be included in the group.
+
+| Name                   | Description                                  |
+| --------------------   | :------------------------------------------: |
+| Group Name         | The name of the group.                           |
+| Group Members      | All checked members will be a part of the group. |
+
+### Rapid Response Call Process
+
+When a Rapid Response call is initiated, it will follow the specified call process. A call process determines which users will be called and the order in which to call them.
+
+![Rapid Response Call Process List](images/rapid-response-call-process-list.png "Rapid Response Call Process List")
+
+The Rapid Response Call Process List has three columns: Call Process Name, Confirmation Method, and Options. When a rapid response call occurs, the user will hear a message about the lead and will need to decide whether to accept the call or not. The Confirmation Method determines whether the agent should accept the call before they hear the message, or vice versa. The Options column includes edit and delete buttons to edit and delete the call processes. Below the list is an add call process button for creating a new call process.
+
+![Rapid Response Call Process Form](images/rapid-response-call-process-edit.png "Rapid Response Call Process Form")
+
+The Rapid Response Call Process consists of a number of steps which will be executed in order when the call happens. A step can either call a Rapid Response User, call a Group, or pause for a certain amount of time. 
+
+| Name               | Description                                                                                        |
+| -----------------  | :------------------------------------------------------------------------------------------------: |
+| Name               | The name of the call process.                                                                      |
+| Confirmation Type  | The order to play the message and accept the call.                                                 |
+| Call Process ID    | The ID of this call process. Used to specify which call process to follow for a given lead source. |
+| Stop on Busy       | Do not attempt to move to the next step if the lead's phone number is busy or congested.           |
+| Stop on No Answer  | Do not attempt to move to the next step if the lead's number does not answer within the time limit.|
+| Don't Retry Lead   | Do not attempt to move to the next step once agent is confirmed, regardless if lead is connected.  |
+| Call Process Steps | The steps that will happen when this call process is triggered. Call a person, a group, or pause.  |
+
+
