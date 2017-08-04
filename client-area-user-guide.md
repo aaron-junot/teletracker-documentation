@@ -515,7 +515,7 @@ The Rapid Response Module consists of the following:
 
 ![Rapid Response Dashboard](images/rapid-response-dashboard.png "Rapid Response Dashboard")
 
-The Rapid Response Dashboard provides a high level overview of the Rapid Response activity for the account. At the top, the number of jobs today, number of jobs for the past 30 days, and average response time are displayed. Next is a chart of Average Jobs by Hour which shows the time of day jobs were completed over the last 30 days. At the bottom of the page, the last 5 jobs completed are displayed next to a pie chart of Success Rate for the past 30 days. 
+The Rapid Response Dashboard provides a high level overview of the Rapid Response activity for the account. Displayed at the top are the number of jobs today, number of jobs for the past 30 days, and average response time. Next is a chart of Average Jobs by Hour which shows the time of day jobs were completed over the last 30 days. At the bottom of the page, the last 5 jobs completed are displayed next to a pie chart of Success Rate for the past 30 days. 
 
 ### Rapid Response Users
 
@@ -538,6 +538,8 @@ The Rapid Response User form allows users to add or update a Rapid Response User
 ![Rapid Response Group List](images/rapid-response-group-list.png "Rapid Response Group List")
 
 Rapid Response Groups are used to call a specific group of users all in one step. The users are called all at once and whichever agent accepts first gets the call. Groups can include as many users as needed. The Group list has three columns: Call Group Name, Members, and Options. The Options column contains an edit button and a delete button. Below the list is a button to add a new group.
+
+Pro tip: hovering over an icon in the Members column shows the full name of that user.
 
 ![Rapid Response Group Form](images/rapid-response-group-edit.png "Rapid Response Group Form")
 
